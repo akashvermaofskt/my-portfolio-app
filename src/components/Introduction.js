@@ -9,15 +9,15 @@ const Introduction = () => {
         </p>
         <div class="container">
             <hr width="80%"></hr>
-            <img className="img-fluid  mx-auto d-block" src="https://lh3.googleusercontent.com/_v6AXbjNGWC2vDeS8LN8UTl_GW_mV44sl7lKU4cbXfr-j5E1VhT2rZ41RVVx71nQQk28BWO4rOg5B1ongTocKMUfDKtUluLcebMW7b02oQvsAcgLNGGGfoPGX4sqbv5sWLzEEdx04to=w2400" id="dp"></img><br/>
+            <img className="img-fluid  mx-auto d-block" src="https://lh3.googleusercontent.com/_v6AXbjNGWC2vDeS8LN8UTl_GW_mV44sl7lKU4cbXfr-j5E1VhT2rZ41RVVx71nQQk28BWO4rOg5B1ongTocKMUfDKtUluLcebMW7b02oQvsAcgLNGGGfoPGX4sqbv5sWLzEEdx04to=w2400" id="dp" alt="Display Pic"></img><br/>
             <div className="text-center" id="AroundTheWeb">
-                <a href="https://www.linkedin.com/in/akashvermaofskt/" target="_blank" className="btn btn-dark btn-lg" id="but" TITLE="LinkedIn">
+                <a href="https://www.linkedin.com/in/akashvermaofskt/"  className="btn btn-dark btn-lg" id="but" TITLE="LinkedIn">
                     <i className="fab fa-linkedin-in" id="ico" ></i>
                 </a>
-                <a href="https://www.facebook.com/akashvermaofskt" target="_blank" className="btn btn-dark btn-lg" id="but" TITLE="Facebook">
+                <a href="https://www.facebook.com/akashvermaofskt"  className="btn btn-dark btn-lg" id="but" TITLE="Facebook">
                     <i className="fab fa-facebook-f" id="ico" ></i>
                 </a>
-                <a href="https://github.com/akashvermaofskt" target="_blank" className="btn btn-dark btn-lg" id="but" TITLE="Github">
+                <a href="https://github.com/akashvermaofskt"  className="btn btn-dark btn-lg" id="but" TITLE="Github">
                     <i className="fab fa-github-alt" id="ico" ></i>
                 </a> 
                 <a href="https://instagram.com/noxious_av" className="btn btn-dark btn-lg" id="but" TITLE="Instagran">
