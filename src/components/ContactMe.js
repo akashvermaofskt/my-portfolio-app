@@ -1,11 +1,31 @@
-import React from 'react';
+import React,{useState} from 'react';
 
 const ContactMe = () => {
+    const [state,setState] = useState({status:""});
+
+    const submitForm = (ev) => {
+        ev.preventDefault();
+        const form = ev.target;
+        const data = new FormData(form);
+        const xhr = new XMLHttpRequest();
+        xhr.open(form.method, form.action);
+        xhr.setRequestHeader("Accept", "application/json");
+        xhr.onreadystatechange = () => {
+            if (xhr.readyState !== XMLHttpRequest.DONE) return;
+            if (xhr.status === 200) {
+            form.reset();
+            setState( {status: "SUCCESS"} );
+            } else {
+            setState({status: "ERROR" });
+            }
+        };
+        xhr.send(data);
+    }
   return (
     <div className="container" id="cm">
         <div className="row">
             <div className="col text-center">
-                <form className="bg-dark" id="mail-me" >
+                <form className="bg-dark" action="https://formspree.io/xwkrlkdw" id="mail-me" method="POST" onSubmit={submitForm}>
                     <h3>
                         Contact Me:
                     </h3>
@@ -21,7 +41,8 @@ const ContactMe = () => {
                     <div className="field">
                         <label><textarea name="msg"  placeholder="Message"></textarea></label>
                     </div>
-                    <button className="btn btn-light">Submit</button>
+                    {state.status === "SUCCESS" ? <p>Thanks!</p> : <button className="btn btn-light">Submit</button>}
+                    {state.status === "ERROR" && <p>Ooops! There was an error.</p>}
                 </form>
             </div>
             <div className="col" id="ct" >
